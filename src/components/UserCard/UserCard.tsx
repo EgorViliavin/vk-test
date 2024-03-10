@@ -1,13 +1,30 @@
-import "./style.css";
+import { Link } from 'react-router-dom';
+import './style.css';
 
-export function UserCard(props) {
+type UserCardProps = {
+  userImg: string;
+  userFirstName: string;
+  userLastName: string;
+  userAddress: string;
+  userId: number;
+};
+
+export function UserCard({
+  userImg,
+  userFirstName,
+  userLastName,
+  userAddress,
+  userId,
+}: UserCardProps) {
   return (
-    <div className="userCard">
-      <img className="userPic" src={props.image} />
-      <div className="userInfo">
-        <div>{`${props.firstName} ${props.lastName}`}</div>
-        <div>{props.address.city}</div>
+    <Link to={`/user/${userId}`}>
+      <div className='userCard'>
+        <img className='userPic' src={userImg} />
+        <div className='userInfo'>
+          <div>{`${userFirstName} ${userLastName}`}</div>
+          <div>{userAddress}</div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

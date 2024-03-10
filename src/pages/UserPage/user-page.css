@@ -1,0 +1,72 @@
+.container {
+  max-width: 1200px;
+  padding: 0 18px;
+  margin: 0 auto;
+}
+.user-page__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.user-page__header-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+}
+.user-page__header-link:hover {
+  color: bisque;
+}
+
+.user-page__user-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.user-page__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.user-page__user-info button {
+  margin-top: 20px;
+}
+.container-pop {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-page__pop {
+  display: none;
+}
+.user-page__pop--active {
+  margin: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  gap: 10px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background-color: aliceblue;
+  height: 500px;
+  width: 500px;
+}
